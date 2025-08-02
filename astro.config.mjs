@@ -3,6 +3,7 @@ import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 import rehypeMermaid from 'rehype-mermaid';
 import addMermaidClass from './src/plugins/add-mermaid-classname';
+import remarkGfm from 'remark-gfm';
 
 // https://astro.build/config
 export default defineConfig({
@@ -11,6 +12,9 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
   markdown: {
+    remarkPlugins: [
+      remarkGfm,
+    ],
     rehypePlugins: [
       addMermaidClass,
       rehypeMermaid,
