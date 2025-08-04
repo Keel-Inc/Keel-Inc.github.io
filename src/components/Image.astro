@@ -1,0 +1,14 @@
+---
+import { Image as AstroImage } from 'astro:assets';
+
+interface Props {
+  src: any;
+  alt: string;
+  title?: string;
+  [key: string]: any;
+}
+
+const { src, alt, title, ...rest } = Astro.props;
+---
+
+<AstroImage src={src} alt={alt} title={title || alt} {...rest} />

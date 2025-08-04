@@ -124,3 +124,20 @@
 .prose pre {
     font-family: var(--font-mono);
 }
+
+code:not(pre code) {
+    background-color: #F0EFEC;
+    color: #621F1E;
+    border: 1px solid #D2D1CD;
+    border-radius: 0.25rem;
+    padding: 2px 6px;
+    font-family: var(--font-mono);
+    font-size: 0.9em;
+    font-weight: normal; /* Remove bold */
+  }
+
+  /* Hide the backticks if they're somehow still showing */
+code:not(pre code)::before,
+code:not(pre code)::after {
+  content: none;
+}
