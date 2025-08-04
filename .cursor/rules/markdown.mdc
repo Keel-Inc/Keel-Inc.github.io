@@ -1,0 +1,37 @@
+---
+globs: *.md,*.mdx
+alwaysApply: false
+---
+# Style Guide
+
+- Article should be written in a mix of first person (I and we), second persond (you). Make sure flips between the persons aren't jarring or confusing, though.
+- Article titles are specified in the yaml front matter, so there should be no H1s within articles.
+- Use "click" when refering to UI elements, but "press" when referring to keyboard keys.
+- Articles should have 2 - 5 high-quality links per 1000 words. "High-quality" means the links are relevant to the article's content and likely to be of interest to anyone reading it. Add links for the sake of meeting a quota is worse than low link density.
+    - Use `(grep '\[.*?\]\(.*?\)' <article>).Count` to count links and `wc -w <article>` to count words
+- Article tags should appear in `src/content/tags.yml` to encourage tag re-use and discourage tag proliferation.
+    - Tags should be in lower-kebab-case (e.g., `risk-management`, not `RiskManagement` or `risk_management`).
+	- Avoid single-use tags (or tags that seem highly likely to be single-use).
+	- Avoid pure stop-words and year stamps (e.g., `howto`, `2025`).
+	- Keep tags under 30 characters
+- Images must have alt-text. If screenshotting a button, the alt text should match the exact label
+- I use `$RK (...)$` for editorial notes to myself. None of these should appear in the final draft of an article. A single `$` might be valid (e.g., part of a regex), but it might also be a partially-deleted editorial comment. Flag any `$`s that are suspicious.
+- Make sure the footnotes are numbered correctly
+
+## Images
+
+- Use Astro's `<Image>` component instead of markdown image syntax for optimized images
+- Images should be stored in `src/assets/images/` and imported at the top of MDX files
+- Import syntax: `import imageName from '../../assets/images/path/to/image.ext';`
+- Component syntax: `<Image src={imageName} alt="Description" />`
+- All images must have descriptive alt-text that matches button labels exactly for UI screenshots
+
+## Formatting
+
+- Use H2/H3 headings instead of bolding or italics for sections and subsections
+- Use **Bold** when referring to  active (i.e., clickable) UI elements (e.g. buttons) 
+- Use  _Emphasis_ when referring to passive UI elements (e.g., labels)
+- Use `Code` for inline code, CLI flags, filenames, and source-file line numbers
+- Use fenced code blocks (``` / ```) for multi-line commands or source files
+- Use <kbd>tags</kbd> for key sequences
+- Use **Bold > With > Chevron > Separators** for navigation paths
