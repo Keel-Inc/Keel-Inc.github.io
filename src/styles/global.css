@@ -1,2 +1,126 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
+
+/* =============================================================================
+   TYPOGRAPHY SYSTEM
+   ============================================================================= */
+
+:root {
+    /* Font Stacks */
+    --font-heading-1: "EB Garamond", "Libre Baskerville", Baskerville, "Baskerville Old Face", "Times New Roman", serif;
+    --font-heading-2-3: "EB Garamond", "Libre Baskerville", Baskerville, "Baskerville Old Face", "Times New Roman", serif;
+    --font-body: "Georgia", "Times New Roman", Times, serif;
+    --font-ui: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    --font-mono: Consolas, "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", "Courier New", monospace;
+    
+    /* Font Weights */
+    --weight-heading-primary: 600;
+    --weight-heading-secondary: 500;
+    --weight-body: 400;
+    
+    /* Line Heights */
+    --leading-tight: 1.4;
+    --leading-normal: 1.5;
+    --leading-relaxed: 1.6;
+}
+
+/* Heading Hierarchy */
+.font-heading-1 {
+    /* Main site title, article titles */
+    font-family: var(--font-heading-1);
+    font-weight: var(--weight-heading-primary);
+    font-size: 3rem; /* 48px - larger for main site title */
+    line-height: var(--leading-tight);
+}
+
+.font-heading-2 {
+    /* Section headings, major article sections */
+    font-family: var(--font-heading-2-3);
+    font-weight: var(--weight-heading-primary);
+    font-size: 1.875rem; /* 30px - larger for section headings */
+    line-height: var(--leading-tight);
+}
+
+.font-heading-3 {
+    /* Article subsections */
+    font-family: var(--font-heading-2-3);
+    font-weight: var(--weight-heading-secondary);
+    font-size: 1.5rem; /* 24px - smaller for article titles */
+    line-height: var(--leading-tight);
+}
+
+/* Body Text */
+.font-body {
+    /* Main paragraph text, readable and comfortable */
+    font-family: var(--font-body);
+    font-weight: var(--weight-body);
+    line-height: var(--leading-relaxed);
+}
+
+.font-body-sans {
+    /* Alternative sans-serif body text for UI elements */
+    font-family: var(--font-ui);
+    font-weight: var(--weight-body);
+    line-height: var(--leading-normal);
+}
+
+/* Specialty Text */
+.font-subtitle {
+    /* Article descriptions, subheadings */
+    font-family: var(--font-body);
+    font-weight: var(--weight-body);
+    line-height: var(--leading-tight);
+}
+
+.font-caption {
+    /* Image captions, footnotes, small text */
+    font-family: var(--font-ui);
+    font-weight: var(--weight-body);
+    line-height: var(--leading-tight);
+}
+
+.font-code {
+    /* Code blocks, technical text */
+    font-family: var(--font-mono);
+    font-weight: var(--weight-body);
+}
+
+/* =============================================================================
+   PROSE/MARKDOWN OVERRIDES - USING SAME VARIABLES AS SEMANTIC CLASSES
+   ============================================================================= */
+
+/* Override Tailwind prose styling with our custom fonts */
+.prose h1 {
+    font-family: var(--font-heading-1);
+    font-weight: var(--weight-heading-primary);
+}
+
+.prose h2 {
+    font-family: var(--font-heading-2-3);
+    font-weight: var(--weight-heading-primary);
+}
+
+.prose h3 {
+    font-family: var(--font-heading-2-3);
+    font-weight: var(--weight-heading-secondary);
+}
+
+.prose h4,
+.prose h5,
+.prose h6 {
+    font-family: var(--font-heading-2-3);
+    font-weight: var(--weight-heading-secondary);
+}
+
+.prose p {
+    font-family: var(--font-body);
+    line-height: var(--leading-relaxed);
+}
+
+.prose code {
+    font-family: var(--font-mono);
+}
+
+.prose pre {
+    font-family: var(--font-mono);
+}
