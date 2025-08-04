@@ -6,7 +6,9 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "lint:md": "markdownlint-cli2",
+    "lint:md:fix": "markdownlint-cli2 --fix"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.16",
@@ -19,6 +21,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.21",
+    "markdownlint-cli2": "^0.18.1",
     "postcss": "^8.5.4",
     "tailwindcss": "^4.1.12"
   }

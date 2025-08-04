@@ -1,0 +1,78 @@
+{
+  // Based on cursor rules in .cursor/rules/markdown.mdc
+  "config": {
+    // Disable first-header-h1 since articles use frontmatter titles and bio is short content
+    "first-header-h1": false,
+    "first-line-heading": false,
+    
+    // Allow HTML for <kbd> tags (per cursor rules for key sequences)
+    "no-inline-html": {
+      "allowed_elements": ["kbd"]
+    },
+    
+    // Ensure proper heading structure (H2/H3 as per style guide)
+    "heading-increment": true,
+    
+    // Line length - flexible for prose but enforce limits in code blocks
+    "line-length": {
+      "line_length": 9999,
+      "heading_line_length": 9999,
+      "code_block_line_length": 100,
+      "tables": false
+    },
+    
+    // Enforce alt text on images (per cursor rules)
+    "no-alt-text": true,
+    
+    // Enforce ATX headings (##) only
+    "heading-style": {
+      "style": "atx"
+    },
+    
+    // Consistent list markers
+    "ul-style": {
+      "style": "asterisk"
+    },
+    
+    // Allow bold and emphasis formatting
+    "emphasis-style": {
+      "style": "underscore"
+    },
+    "strong-style": {
+      "style": "asterisk"
+    },
+    
+    // Disable bare URLs since articles should use proper link formatting
+    "no-bare-urls": true,
+    
+    // Allow multiple blank lines for readability in long articles
+    "no-multiple-blanks": false,
+    
+    // Allow fenced code blocks without surrounding blank lines for compact formatting
+    "blanks-around-fences": false,
+    
+    // More lenient list indentation for cursor rules format
+    "ul-indent": false,
+    "list-indent": false,
+    
+    // Require proper code fence formatting
+    "fenced-code-language": false,
+    
+    // Allow trailing punctuation in headers
+    "no-trailing-punctuation": false
+  },
+  
+  // Glob patterns for files to lint
+  "globs": [
+    "**/*.md",
+    "**/*.mdc"
+  ],
+  
+  // Ignore patterns
+  "ignores": [
+    "**/node_modules/**",
+    "**/dist/**",
+    "**/build/**",
+    ".cursor/rules/markdown.mdc"  // Ignore cursor rules file as it has its own format
+  ]
+}
