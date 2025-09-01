@@ -12,7 +12,7 @@
     "@tailwindcss/typography": "^0.5.16",
     "@tailwindcss/vite": "^4.1.8",
     "astro": "^5.13.3",
-    "playwright": "^1.53.0",
+    "playwright": "^1.55.0",
     "rehype-mermaid": "^3.0.0",
     "remark-gfm": "^4.0.0",
     "unist-util-visit": "^5.0.0"
