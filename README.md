@@ -1,5 +1,7 @@
 # Keel-Inc Website
 
+[![Deploy Status](https://github.com/Keel-Inc/Keel-Inc.github.io/workflows/Deploy%20Astro%20site%20to%20GitHub%20Pages/badge.svg)](https://github.com/Keel-Inc/Keel-Inc.github.io/actions/workflows/deploy.yml)
+
 All commands are run from the root of the project:
 
 | Command                   | Action                                           |
