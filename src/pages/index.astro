@@ -11,11 +11,13 @@ const site = {
 
 // Get articles from content collection
 const articles = await getCollection('articles');
-const articlesList = articles.map(article => ({
-  slug: `/guides/${article.slug}`,
-  title: article.data.title,
-  desc: article.data.description
-}));
+const articlesList = articles
+  .sort((a, b) => new Date(a.data.publishedDate).getTime() - new Date(b.data.publishedDate).getTime())
+  .map(article => ({
+    slug: `/guides/${article.slug}`,
+    title: article.data.title,
+    desc: article.data.description
+  }));
 
 // Read bio content
 const bioModules = import.meta.glob('../content/bio.md');
