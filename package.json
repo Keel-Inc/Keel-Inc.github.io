@@ -13,7 +13,7 @@
   "dependencies": {
     "@astrojs/mdx": "^4.3.3",
     "@tailwindcss/typography": "^0.5.16",
-    "@tailwindcss/vite": "^4.1.12",
+    "@tailwindcss/vite": "^4.1.16",
     "astro": "^5.13.3",
     "playwright": "^1.55.0",
     "rehype-mermaid": "^3.0.0",
