@@ -73,6 +73,6 @@
     "**/node_modules/**",
     "**/dist/**",
     "**/build/**",
-    ".cursor/rules/markdown.mdc"  // Ignore cursor rules file as it has its own format
+    "CLAUDE.md"  // Ignore project-specific Claude Code instructions
   ]
 }
