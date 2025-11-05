@@ -4,7 +4,7 @@ series:			"Modern Embedded Development for MedTech"
 description:	"How to set up VS Code for embedded development"
 tags:			["medtech", "embedded", "stm32", "vscode", "debugging"]
 publishedDate:	2025-08-04
-modifiedDate:	2025-08-04
+modifiedDate:	2025-11-05
 ---
 
 import Image from '../../components/Image.astro';
@@ -32,9 +32,9 @@ import importCmakeProjectImg from '../../assets/images/blame-your-tools/vs-code/
 
 The implication of "a poor craftsman blames his tools[^1]" is that you should take responsibility for your failures rather than blaming your tools. And—yes, sure, own your outcomes, growth mindset, etc. But, also, if you have poor tools, that is a problem! A solvable problem! You (often) do not _need_ to use poor tools. You can find better ones. And the more crucial a tool, the higher priority it is to find the _best_ one.
 
-An IDE (Integrated Development Environment) is one of a programmer's most important tools. It's the program you use to write software in the same way that MS Word (or Google Docs) is the program you use to write everything else. IDEs are so-called because they _integrate_ a bunch of tools (text editing, compiling, debugging, etc) for _development_ (programming) into a single _environment_ (program). If you are using a text editor (notepad, vim with no extensions) to write code, you should absolutely switch to an IDE. If you are using a crappy IDE (perhaps because it came  bundled with your compiler or is free from your hardware vendor), you should find a better one. Your time and attention are a scarce resource. Most of the time, they are the _most_ scarce resource. You need an IDE that will use them effectively.
+An IDE (Integrated Development Environment) is one of a programmer's most important tools. It's the program you use to write software in the same way that MS Word (or Google Docs) is the program you use to write everything else. IDEs are so-called because they _integrate_ a bunch of tools (text editing, compiling, debugging, etc) for _development_ (programming) into a single _environment_ (program). If you are using a text editor (notepad, vim with no extensions) to write code, you should absolutely switch to an IDE. If you are using a crappy IDE (perhaps because it came bundled with your compiler or is free from your hardware vendor), you should find a better one. Your time and attention are a scarce resource. Most of the time, they are the _most_ scarce resource. You need an IDE that will use them effectively.
 
-This guide explains how to set up VS Code for working with STM32 microcontrollers (MCUs) . The former because VS Code is both free and good. The latter because STM32 MCUs are ubiquitous in industry and have great tooling[^2]. But I hope it will be apparent that you can apply a similar approach to use VS Code with other compilers (e.g., IAR), other chips (e.g., NXP, Nordic), or other languages entirely (e.g., Rust, C#)[^3].
+This guide explains how to set up VS Code for working with STM32 microcontrollers (MCUs). The former because VS Code is both free and good. The latter because STM32 MCUs are ubiquitous in industry and have great tooling[^2]. But I hope it will be apparent that you can apply a similar approach to use VS Code with other compilers (e.g., IAR), other chips (e.g., NXP, Nordic), or other languages entirely (e.g., Rust, C#)[^3].
 
 I will assume that you've arrived at this guide because you already have an STM32 board and [VS Code](https://code.visualstudio.com/download) installed (follow the link if you don't), but otherwise you are starting from scratch.
 
@@ -64,7 +64,7 @@ In the _Start Project from Example_ dialogue, you can select the project locatio
 
 <Image src={projectManagerImg} alt="Project Manager tab with Toolchain / IDE highlighted and Generate Code button highlighted" />
 
-Now you are ready to generate the project by clicking the **Generate Code** button in the top right corner. If you want, this can be a one-time step, but the STM tooling makes re-configuring the board very easy, so it can be valuable to keep it around. For example, if you later discover that you need an additional peripheral, you can use this project to setup the pins and DMAs and anything else, then regenerate the project. So long as you're careful with how you integrate the project's source files into your overall project, this is maintainable, and the key files are all source-control compatible. Finally, I'll rename to project folder to `STM32Cube-VSCode`:
+Now you are ready to generate the project by clicking the **Generate Code** button in the top right corner. If you want, this can be a one-time step, but the STM tooling makes re-configuring the board very easy, so it can be valuable to keep it around. For example, if you later discover that you need an additional peripheral, you can use this project to set up the pins and DMAs and anything else, then regenerate the project. So long as you're careful with how you integrate the project's source files into your overall project, this is maintainable, and the key files are all source-control compatible. Finally, I'll rename to project folder to `STM32Cube-VSCode`:
 ```
 Rename-Item "C:\Path\To\Src\HID_RTOS\" "STM32Cube-VSCode"
 ```
@@ -93,7 +93,7 @@ Next, go to **STM32 VS Code Extension > Import CMake Project**.
 
 <Image src={importCmakeProjectImg} alt="STM32 VS Code Extension sidebar with Import CMake Project highlighted" />
 
-In the folder picker dialog (not shown), choose the project folder you already have open (e.g., `STM32Cube-VSCode`). The UX here is a bit confusing; although "import" implies moving or copying files from a source (presumably the folder you're picking) to a destination (presumably the workspace directory), what this button actually does is create a `.vscode` folder with some useful `json` files—most notably `launch.json` and `tasks.json`—in the folder you pick. So you want to choose the STM32 Cube project directory. In the repository accompanying this article, I have committed the four json files, but typically I would git-ignore `.vscode` (so that individual developers can customize their launch and task settings) and use the import workflow to recreate the files on a fresh checkout (or, more likely, some kind of automation of that process).
+In the folder picker dialog (not shown), choose the project folder you already have open (e.g., `STM32Cube-VSCode`). The UX here is a bit confusing; although "import" implies moving or copying files from a source (presumably the folder you're picking) to a destination (presumably the workspace directory), what this button actually does is create a `.vscode` folder with some useful `json` files—most notably `launch.json` and `tasks.json`—in the folder you pick. So you want to choose the STM32 Cube project directory. In the repository accompanying this article, I have committed the four JSON files, but typically I would git-ignore `.vscode` (so that individual developers can customize their launch and task settings) and use the import workflow to recreate the files on a fresh checkout (or, more likely, some kind of automation of that process).
 
 <Image src={confirmImportProjectImg} alt="Confirm import project dialog with Import project highlighted" />
 
@@ -318,7 +318,7 @@ Now we've confirmed that the bootloader has successfully loaded and begun the ma
 
 ## Next
 
-Was anything unclear or confusing in this article? Is it adjacent-to, but not quite what you need? Send an email to [blame-your-tools@keel-inc.com](mailto:blame-your-tools@keel-inc.com) and let me help.
+Was anything unclear or confusing in this article? Is it adjacent-to, but not quite what you need? Email [blame-your-tools@keel-inc.com](mailto:blame-your-tools@keel-inc.com) and let me help.
 
 [^1]: I'm given to understand that the traditional expression is "workman," but this is the version my dad liked.
 
@@ -328,7 +328,7 @@ Was anything unclear or confusing in this article? Is it adjacent-to, but not qu
 
 [^4]: A thorough description of CMake is beyond the scope of this article, but compiling is the process of creating your program from source code. Compiling anything beyond an absolutely trivial program "by hand" (i.e., with handwritten compile commands) is incredibly tedious and error-prone, so programmers came up with "build systems," which are small programs that compile the actual program you're working on. One such build system is called Make, whose source files are called makefiles. But you need a separate makefile for each combination of compiler, Operating System, and chip you want to support, and writing make (or other build system) files by hand is also kind of tedious and error-prone, so programmers also came up with build system generators, like CMake, that generate the build system source files from even more abstract source files. So that's instructions (CMake) for making instructions (Make) for making your instructions (the actual program).
 
-[^5]: This is often called flashing the board because the program ends up in the flash memory, which is persistent (i.e., across  power cycles, or turning the board off and back on). I am less certain of the etymology of flash memory itself, but apparently it comes from the mechanism for erasing the memory, which was reminiscent of a camera flash.
+[^5]: This is often called flashing the board because the program ends up in the flash memory, which is persistent (i.e., across power cycles, or turning the board off and back on). I am less certain of the etymology of flash memory itself, but apparently it comes from the mechanism for erasing the memory, which was reminiscent of a camera flash.
 
 [^6]: Very briefly, upgrading a program means overwriting the program in memory. But that's the very same program that's performing the upgrade—what will you do while it's being erased and over-written? One approach is to temporarily copy the program to RAM and execute from there. Another is to have the bootloader do the upgrade. The bootloader is simple enough that you (hopefully) never have to change it.
 
