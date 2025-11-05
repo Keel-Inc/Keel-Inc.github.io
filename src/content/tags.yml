@@ -1,7 +1,10 @@
 [
   "debugging",
   "embedded",
+  "flatbuffers",
   "medtech",
+  "qemu",
+  "serialization",
   "stm32",
   "vscode",
 ]
