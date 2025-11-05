@@ -153,6 +153,7 @@
 
 .prose pre {
     font-family: var(--font-mono);
+    line-height: 1.2;
 }
 
 code:not(pre code) {
