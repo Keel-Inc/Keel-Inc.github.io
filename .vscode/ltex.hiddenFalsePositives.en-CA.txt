@@ -15,3 +15,8 @@
 {"rule":"MORFOLOGIK_RULE_EN_CA","sentence":"^\\Q<Image src={debugAppliMainImg} alt=\"Appli\\Src\\main.c with the debugger stopped on line 112\" />\\E$"}
 {"rule":"MORFOLOGIK_RULE_EN_CA","sentence":"^\\Q<Image src={debugUsbHostImg} alt=\"usb_host.c with the debugger stopped on line 264\" />\\E$"}
 {"rule":"COMMA_COMPOUND_SENTENCE","sentence":"^\\QIf that was all your available memory and you need to allocate an 11 KB block, your allocation will fail, even though you have enough free memory in aggregate.\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_CA","sentence":"^\\QThis is a streaming function that enables direct-to-framebuffer writes.\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_CA","sentence":"^\\QSTM32F746 Renode demo showing a recreation of the Mistify screen saver from Windows 95\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_CA","sentence":"^\\QThis command resizes the input image to 480x272 (the size of the STM32F746 Discovery board's LCD screen), center-cropping to maintain aspect ratio, converts it to RGB565, and writes a C header-like file containing the pixel data as a uint16_t array.\\E$"}
+{"rule":"EN_A_VS_AN","sentence":"^\\QThis command resizes the input image to 480x272 (the size of the STM32F746 Discovery board's LCD screen), center-cropping to maintain aspect ratio, converts it to RGB565, and writes a C header-like file containing the pixel data as a uint16_t array.\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_CA","sentence":"^\\Q<Image src={renodeDemo} alt=\"STM32F746 Renode demo showing a recreation of the Mistify screen saver from Windows 95\" />\\E$"}
