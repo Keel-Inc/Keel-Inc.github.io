@@ -24,14 +24,14 @@ const site = {
   <Fragment slot="head">
     <title>{site.title}</title>
     <meta name="description" content={site.desc} />
-    <link rel="canonical" href={`${site.url}/guides/${article.slug}`} />
+    <link rel="canonical" href={`${site.url}/articles/${article.slug}`} />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
     <!-- OpenGraph -->
     <meta property="og:type" content="article" />
-    <meta property="og:url" content={`${site.url}/guides/${article.slug}`} />
+    <meta property="og:url" content={`${site.url}/articles/${article.slug}`} />
     <meta property="og:title" content={article.data.title} />
     <meta property="og:description" content={site.desc} />
     <meta property="og:image" content="/images/og-banner.png" />
@@ -62,7 +62,7 @@ const site = {
         "name": "Keel Inc.",
         "url": "https://keel-inc.com"
       },
-      "url": `${site.url}/guides/${article.slug}`,
+      "url": `${site.url}/articles/${article.slug}`,
       ...(article.data.tags && { "keywords": article.data.tags.join(", ") })
     })}
     </script>
