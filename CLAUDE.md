@@ -29,7 +29,7 @@ The site uses Astro's content collections for managing articles:
 ### Routing
 
 - **Home page**: `src/pages/index.astro` - Lists articles from content collection, sorted by publication date
-- **Article pages**: `src/pages/guides/[...slug].astro` - Dynamic routes generated from content collection
+- **Article pages**: `src/pages/articles/[...slug].astro` - Dynamic routes generated from content collection
 - **Bio**: `src/content/bio.md` - Author bio displayed on home page
 
 ### Styling

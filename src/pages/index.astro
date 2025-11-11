@@ -14,7 +14,7 @@ const articles = await getCollection('articles');
 const articlesList = articles
   .sort((a, b) => new Date(a.data.publishedDate).getTime() - new Date(b.data.publishedDate).getTime())
   .map(article => ({
-    slug: `/guides/${article.slug}`,
+    slug: `/articles/${article.slug}`,
     title: article.data.title,
     desc: article.data.description
   }));
