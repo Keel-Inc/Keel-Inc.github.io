@@ -1,9 +1,12 @@
 [
+  "cbor",
   "debugging",
   "embedded",
   "flatbuffers",
   "medtech",
   "qemu",
+  "renode",
+  "rpc",
   "serialization",
   "stm32",
   "vscode",
