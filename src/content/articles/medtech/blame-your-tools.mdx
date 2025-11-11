@@ -1,5 +1,6 @@
 ---
 title:			"Blame Your Tools"
+slug:			"blame-your-tools"
 series:			"Modern Embedded Development for MedTech"
 description:	"How to set up VS Code for embedded development"
 tags:			["medtech", "embedded", "stm32", "vscode", "debugging"]
@@ -7,28 +8,28 @@ publishedDate:	2025-08-04
 modifiedDate:	2025-11-05
 ---
 
-import Image from '../../components/Image.astro';
+import Image from '../../../components/Image.astro';
 
-import landingPageImg from '../../assets/images/blame-your-tools/stm32cube-mx/landing-page.png';
-import exampleSelectorImg from '../../assets/images/blame-your-tools/stm32cube-mx/example-selector.png';
-import startProjectImg from '../../assets/images/blame-your-tools/stm32cube-mx/start-project.png';
-import projectManagerImg from '../../assets/images/blame-your-tools/stm32cube-mx/project-manager.png';
-import selectPresetImg from '../../assets/images/blame-your-tools/vs-code/select-preset.png';
-import confirmImportProjectImg from '../../assets/images/blame-your-tools/vs-code/confirm-import-project.png';
-import statusBarImg from '../../assets/images/blame-your-tools/vs-code/status-bar.png';
-import pwrStatusImg from '../../assets/images/blame-your-tools/stm32h7s78-dk/pwr-status.jpg';
-import svgDemoImg from '../../assets/images/blame-your-tools/stm32h7s78-dk/svg-demo.jpg';
-import runAndDebugImg from '../../assets/images/blame-your-tools/vs-code/run-and-debug.png';
-import deviceConnectImg from '../../assets/images/blame-your-tools/stsw-link007/device-connect.png';
-import defaultsImg from '../../assets/images/blame-your-tools/stsw-link007/defaults.png';
-import debugBootStopImg from '../../assets/images/blame-your-tools/vs-code/debug-boot-stop-highlighted.png';
-import usb1Img from '../../assets/images/blame-your-tools/stm32h7s78-dk/usb1.jpg';
-import debugBootCommandBarImg from '../../assets/images/blame-your-tools/vs-code/debug-boot-command-bar-highlighted.png';
-import debugBootApplicationImg from '../../assets/images/blame-your-tools/vs-code/debug-boot-application.png';
-import debugStm32BootXipImg from '../../assets/images/blame-your-tools/vs-code/debug-stm32-boot-xip.png';
-import debugAppliMainImg from '../../assets/images/blame-your-tools/vs-code/debug-appli-main.png';
-import debugUsbHostImg from '../../assets/images/blame-your-tools/vs-code/debug-usb-host.png';
-import importCmakeProjectImg from '../../assets/images/blame-your-tools/vs-code/import-cmake-project.png';
+import landingPageImg from '../../../assets/images/blame-your-tools/stm32cube-mx/landing-page.png';
+import exampleSelectorImg from '../../../assets/images/blame-your-tools/stm32cube-mx/example-selector.png';
+import startProjectImg from '../../../assets/images/blame-your-tools/stm32cube-mx/start-project.png';
+import projectManagerImg from '../../../assets/images/blame-your-tools/stm32cube-mx/project-manager.png';
+import selectPresetImg from '../../../assets/images/blame-your-tools/vs-code/select-preset.png';
+import confirmImportProjectImg from '../../../assets/images/blame-your-tools/vs-code/confirm-import-project.png';
+import statusBarImg from '../../../assets/images/blame-your-tools/vs-code/status-bar.png';
+import pwrStatusImg from '../../../assets/images/blame-your-tools/stm32h7s78-dk/pwr-status.jpg';
+import svgDemoImg from '../../../assets/images/blame-your-tools/stm32h7s78-dk/svg-demo.jpg';
+import runAndDebugImg from '../../../assets/images/blame-your-tools/vs-code/run-and-debug.png';
+import deviceConnectImg from '../../../assets/images/blame-your-tools/stsw-link007/device-connect.png';
+import defaultsImg from '../../../assets/images/blame-your-tools/stsw-link007/defaults.png';
+import debugBootStopImg from '../../../assets/images/blame-your-tools/vs-code/debug-boot-stop-highlighted.png';
+import usb1Img from '../../../assets/images/blame-your-tools/stm32h7s78-dk/usb1.jpg';
+import debugBootCommandBarImg from '../../../assets/images/blame-your-tools/vs-code/debug-boot-command-bar-highlighted.png';
+import debugBootApplicationImg from '../../../assets/images/blame-your-tools/vs-code/debug-boot-application.png';
+import debugStm32BootXipImg from '../../../assets/images/blame-your-tools/vs-code/debug-stm32-boot-xip.png';
+import debugAppliMainImg from '../../../assets/images/blame-your-tools/vs-code/debug-appli-main.png';
+import debugUsbHostImg from '../../../assets/images/blame-your-tools/vs-code/debug-usb-host.png';
+import importCmakeProjectImg from '../../../assets/images/blame-your-tools/vs-code/import-cmake-project.png';
 
 The implication of "a poor craftsman blames his tools[^1]" is that you should take responsibility for your failures rather than blaming your tools. And—yes, sure, own your outcomes, growth mindset, etc. But, also, if you have poor tools, that is a problem! A solvable problem! You (often) do not _need_ to use poor tools. You can find better ones. And the more crucial a tool, the higher priority it is to find the _best_ one.
 

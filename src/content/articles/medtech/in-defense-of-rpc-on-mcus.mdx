@@ -1,5 +1,6 @@
 ---
 title:			"In Defense of RPC On MCUs"
+slug:			"in-defense-of-rpc-on-mcus"
 series:			"Modern Embedded Development for MedTech"
 description:	"Building an instrument protocol with CBOR-RPC"
 tags:			["medtech", "embedded", "stm32", "cbor", "rpc", "renode"]
@@ -7,11 +8,11 @@ publishedDate:	2025-11-11
 modifiedDate:	2025-11-11
 ---
 
-import Image from '../../components/Image.astro';
+import Image from '../../../components/Image.astro';
 
-import renodeDemo from '../../assets/images/in-defense-of-rpc-on-mcus/stm32f746-resc.png';
-import keelIncLogo from '../../assets/images/in-defense-of-rpc-on-mcus/keel-inc-logo.png';
-import keelIncDisplay from '../../assets/images/in-defense-of-rpc-on-mcus/keel-inc-display.png';
+import renodeDemo from '../../../assets/images/in-defense-of-rpc-on-mcus/stm32f746-resc.png';
+import keelIncLogo from '../../../assets/images/in-defense-of-rpc-on-mcus/keel-inc-logo.png';
+import keelIncDisplay from '../../../assets/images/in-defense-of-rpc-on-mcus/keel-inc-display.png';
 
 I began my career at a start-up a month or so after it got FDA clearance for its first product. Alas, the Great Financial Crisis struck mid-way through the hoped-for hockey-stick shaped ramp in revenue and the company had to sell itself on less-than-favourable terms. The buyer was a company called Inverness Medical (since renamed). After the acquisition, we (meaning, the start-up I had joined) slotted somewhat awkwardly into Inverness' portfolio of point-of-care, in-vitro diagnostic devices. "Awkwardly" because Inverness' other products were bench-top devices meant to be wheeled to the patient on a cart (or perhaps permanently situated somewhere closer than the hospital's main diagnostic laboratory) and plugged into a wall socket. Our product, meanwhile, was hand-held, battery-powered, and therefore very sensitive to power consumption. Every other product in Inverness' line-up had Cortex-A chips (i.e., the kind you'd find in a smartphone) running QNX or some flavour of Linux, while our product had Cortex-M chips (of the kind you'd find in a fancy toaster or smartphone daughterboard) and no OS at all.
 
