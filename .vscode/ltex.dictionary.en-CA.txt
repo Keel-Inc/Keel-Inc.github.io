@@ -20,3 +20,9 @@ DMAs
 FreeRTOS
 makefile
 makefiles
+
+CBOR
+CBOR-RPC
+Renode
+daughterboard
+TinyCBOR
