@@ -16,7 +16,8 @@ See README.md for all available commands (install, dev, build, preview, linting,
 
 The site uses Astro's content collections for managing articles:
 
-- **Content location**: `src/content/articles/` contains MDX files
+- **Content location**: `src/content/articles/` organized in series subfolders:
+  - `medtech/` - "Modern Embedded Development for MedTech" series
 - **Schema definition**: `src/content/config.ts` defines the article schema with required fields:
   - `title`: Article title (appears in frontmatter, not as H1 in content)
   - `series`: Article series name
@@ -24,6 +25,8 @@ The site uses Astro's content collections for managing articles:
   - `tags`: Optional array (must exist in `src/content/tags.yml`)
   - `publishedDate`: Publication date
   - `modifiedDate`: Last modified date
+- **URL structure**: All articles are served at flat URLs (`/articles/article-name`) regardless of folder structure
+- **Import paths**: Articles in subfolders must use `../../../` to reference components and assets (one extra `../` compared to root-level articles)
 - **Tag management**: All tags must be defined in `src/content/tags.yml` to prevent proliferation
 
 ### Routing
