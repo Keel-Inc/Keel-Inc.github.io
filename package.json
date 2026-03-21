@@ -25,6 +25,6 @@
     "autoprefixer": "^10.4.27",
     "markdownlint-cli2": "^0.21.0",
     "postcss": "^8.5.8",
-    "tailwindcss": "^4.2.0"
+    "tailwindcss": "^4.2.2"
   }
 }
