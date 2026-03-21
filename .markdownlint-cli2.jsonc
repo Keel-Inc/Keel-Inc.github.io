@@ -73,6 +73,7 @@
     "**/node_modules/**",
     "**/dist/**",
     "**/build/**",
+    "AGENTS.md",  // Ignore project-specific agent instructions
     "CLAUDE.md"  // Ignore project-specific Claude Code instructions
   ]
 }
