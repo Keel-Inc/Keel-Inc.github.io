@@ -22,7 +22,7 @@
     "unist-util-visit": "^5.1.0"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.24",
+    "autoprefixer": "^10.4.27",
     "markdownlint-cli2": "^0.21.0",
     "postcss": "^8.5.8",
     "tailwindcss": "^4.2.0"
