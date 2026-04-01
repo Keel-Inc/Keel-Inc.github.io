@@ -103,6 +103,10 @@ These rules must be followed for all article writing:
 - Format: `[^N]` in text, `[^N]:` for definition
 - Must be numbered and placed at end of article
 
+## Dependency Management
+
+Always pin dependencies to exact versions — no `^`, `~`, or bare package names. Run `npm install --save-exact` or set `save-exact=true` in `.npmrc` when adding packages. `package-lock.json` must be committed.
+
 ## Markdown Linting
 
 Configuration in `.markdownlint-cli2.jsonc`:
