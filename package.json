@@ -12,13 +12,13 @@
     "lint:pkg": "npmPkgJsonLint ."
   },
   "dependencies": {
-    "@astrojs/markdown-remark": "7.2.2",
-    "@astrojs/mdx": "7.0.5",
+    "@astrojs/markdown-remark": "7.2.4",
+    "@astrojs/mdx": "7.0.7",
     "@tailwindcss/typography": "0.5.20",
     "@tailwindcss/vite": "4.3.3",
-    "astro": "7.2.1",
+    "astro": "7.2.4",
     "astro-mermaid": "2.1.0",
-    "mermaid": "11.16.1",
+    "mermaid": "11.17.0",
     "remark-gfm": "4.0.1",
     "sharp": "0.35.3",
     "unist-util-visit": "5.1.0"
@@ -26,7 +26,7 @@
   "devDependencies": {
     "autoprefixer": "10.5.4",
     "markdownlint-cli2": "0.23.2",
-    "npm-package-json-lint": "10.5.0",
+    "npm-package-json-lint": "11.0.0",
     "postcss": "8.5.26",
     "tailwindcss": "4.3.3"
   }
